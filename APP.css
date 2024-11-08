@@ -1,74 +1,95 @@
-body,
-html {
+body {
     margin: 0px;
-    padding: 0px;
 }
 
 @font-face {
-    font-family: 'MySVGFont';
-    src: url('./fonts/roboto-regular.woff2') format('woff2');
-    src: url('./fonts/Street2-Bold.1808b3fd.woff2') format('woff2');
-    src: url('./fonts/Street2-Book.33ff7498.woff2') format('woff2');
-    src: url('./fonts/Street2-Medium.65dccad8.woff2') format('woff2');
+    font-family: 'Street2-Thin';
     src: url('./fonts/Street2-Thin.e37d5328.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Street2-regular';
+    src: url('./fonts/roboto-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Street2-Bold';
+    src: url('./fonts/Street2-Bold.1808b3fd.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Street2-Book';
+    src: url('./fonts/Street2-Book.33ff7498.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Street2-ThinItalic';
     src: url('./fonts/Street2-ThinItalic.aae1ce0c.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'Street2-Medium';
+    src: url('./fonts/Street2-Medium.65dccad8.woff2') format('woff2');
+}
+
+
 .header_container {
     display: grid;
-    grid-template-columns: 130px 1fr 300px;
-    grid-template-rows: auto;
     align-items: center;
-    padding: 0px 105px;
+    grid-template-columns: 60px 1fr 270px;
+    grid-template-rows: auto;
+    padding: 0px 100px;
+}
+
+.header-item1 {
+    margin: 0px 10px;
 }
 
 .header-item1 img {
-    height:65px;
-    width: 65px;
+    height: 62px;
+    width: 62px;
     cursor: pointer;
-}
-
-.header-item2 {
-    display: flex;
 }
 
 .nav-links {
     display: flex;
+    margin: 20px;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    font-family: 'Street2-thin';
+    font-size: 11px;
 }
 
 .nav-links li {
-    margin-right: 20px;
+    margin: 0px 10px;
 }
 
 .nav-links li a {
-    font-family:Street2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     text-decoration: none;
-    font-size: 13px;
     color: #000;
 }
 
 .dropdown-select {
-    width: 70px;
-    font-family:Street2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    width: 60px;
     border: none;
     cursor: pointer;
+    font-family: 'Street2-thin';
+    font-size: 11px;
 }
 
 .header-item3 {
-    align-items: center;
-    
+    margin: auto;
+
 }
 
 .sign_in {
     color: rgb(76, 74, 74);
     cursor: pointer;
-    font-family:Street2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     border: none;
     background-color: transparent;
+    font-family: 'Street2-Medium';
+    font-size: 11px;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 .sign_in:hover {
@@ -77,14 +98,22 @@ html {
 
 .sign_up {
     cursor: pointer;
-    font-weight: bold;
     color: #fff;
-    font-family:Street2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    padding: 13px 10px;
+    padding: 12px 10px;
     background: #002be7;
-    font-size: small;
+    font-family: 'Street2-Medium';
+    font-size: 11px;
     border-radius: 2px;
     transition-duration: .3s;
+}
+
+.max-icon {
+    background-image: url(./assets/max.svg);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    height: 13px;
+    width: 58px;
+    display: inline-block;
 }
 
 .header-item3 a:hover {
@@ -92,19 +121,9 @@ html {
     background-color: #052c65;
 }
 
-.max-icon {
-    background-image: url(./assets/max.svg);
-    background-position: 100%;
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 14px;
-    width: 58px;
-    display: inline-block;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .header_container {
-        grid-template-columns: 100px auto 300px;
+        grid-template-columns: 0px auto 500px;
         grid-template-rows: auto auto auto;
     }
 
@@ -115,13 +134,10 @@ html {
     }
 
     .nav-links li {
-        margin-right: 0px;
-        margin-bottom: 0px;
         display: none;
     }
 
     .header-item3 {
-        justify-content: center;
-        margin-left: 70px;
+        margin-left: 50px;
     }
 }
